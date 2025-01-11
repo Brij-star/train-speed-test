@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Train Speed Test - Live Train Speed Check and Vehicle Speedometer</title>
+        <meta name="description" content="Experience real-time speed testing with the Train Speed Test tool. Check train and vehicle speeds, analyze metrics like maximum speed, average speed, acceleration, and distance. Optimize safety and performance today!">
+        <meta name="keywords" content="Train Speed Test, Myspeed Train, Vehicle Speedometer Test, Speed Test for Vehicle, Train Speed, Train Speed Check, Live Speed Test, Train Speed Measurement">
+        <meta name="author" content="Train Speed Test">
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="style.css">
+        <link rel="canonical" href="https://brij-star.github.io/train-speed-test">
+        <meta property="og:title" content="Train Speed Test - Live Train Speed Check and Vehicle Speedometer">
+        <meta property="og:description" content="Explore the Train Speed Test tool to measure live train and vehicle speeds. Analyze key metrics like speed, acceleration, and distance for performance and safety improvements.">
+        <meta property="og:url" content="https://brij-star.github.io/train-speed-test">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="train.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Train Speed Test - Real-Time Speed Check for Trains and Vehicles">
+        <meta name="twitter:description" content="Discover the best speed testing tool to measure train and vehicle speeds. Analyze metrics for maximum efficiency and safety.">
+        <meta name="twitter:image" content="train.jpg">
+    </head>
+    
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="train.jpg" alt="Train Logo" class="train-logo">
+                <h1>TRAIN SPEED TEST</h1>
+            </div>
+            <div class="status-bar">
+                <div class="status-item">
+                    <span class="label">Max Speed:</span>
+                    <span id="maxSpeed">0 km/h</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">Average Speed:</span>
+                    <span id="avgSpeed">0 km/h</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">Distance:</span>
+                    <span id="distance">0 km</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="speedometer-container">
+                <canvas id="speedometer" width="500" height="500"></canvas>
+                <div class="speed-display">
+                    <div id="speed-value">0</div>
+                    <div id="speed-unit">km/h</div>
+                </div>
+                <div class="speed-history">
+                    <canvas id="historyGraph" width="400" height="100"></canvas>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="milesButton" class="unit-button">MI/H</button>
+                <button id="kmButton" class="unit-button active">KM/H</button>
+                <button id="startButton" class="start-button">START TEST</button>
+                <button id="resetButton" class="reset-button">RESET</button>
+            </div>
+
+            <div class="info-panel">
+                <div class="info-section">
+                    <h3>Current Session</h3>
+                    <div class="session-stats">
+                        <div class="stat">
+                            <span class="stat-label">Duration:</span>
+                            <span id="duration">00:00:00</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-label">Acceleration:</span>
+                            <span id="acceleration">0 m/s²</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <p>The Train Speed Test tool provides users with an interactive way to measure and analyze the speed of trains, vehicles, or similar motion-based entities. This dynamic tool caters to engineers, railway enthusiasts, and individuals curious about speed dynamics. It accurately evaluates metrics such as current speed, average speed, maximum speed, acceleration, and distance covered. With its intuitive design and real-time updates, the Train Speed Test offers unmatched functionality.</p>
+
+            <p>This guide dives into the importance of speed testing, how the tool works, and its applications. Whether you're exploring speed capabilities or optimizing performance, this content will help you understand the tool and how it meets various user needs.</p>
+
+            <section>
+                <h2>What is Train Speed Testing?</h2>
+                <p>Train speed testing ensures that locomotives operate at their peak performance, meeting safety and efficiency standards. It is a critical component in the development and optimization of modern trains. Real-time speed analysis not only improves safety but also enhances scheduling, energy efficiency, and passenger comfort.</p>
+
+                <p>Key aspects of train speed testing include:</p>
+                <ul>
+                    <li>Maximum Speed Analysis: Determines the peak speed under various operational conditions.</li>
+                    <li>Average Speed Monitoring: Tracks the average speed over a distance or duration.</li>
+                    <li>Acceleration and Deceleration Rates: Measures how quickly a train can gain or lose speed.</li>
+                    <li>Distance Measurement: Provides insights into how far a train travels within a specific timeframe.</li>
+                    <li>Stability and Safety Checks: Ensures smooth operation under diverse terrains and weather conditions.</li>
+                </ul>
+
+                <p>The Train Speed Test tool integrates these functionalities into a simplified, user-friendly interface, making it accessible to professionals and enthusiasts alike.</p>
+            </section>
+
+            <section>
+                <h2>Features of the Train Speed Test Tool</h2>
+                <h3>1. Advanced Speedometer</h3>
+                <p>The tool's speedometer visualizes real-time speeds with a sleek and customizable design. Users can switch between units like kilometers per hour (km/h) and miles per hour (mi/h) for versatility. The gradient display and dynamic needle movement make tracking speed an engaging experience.</p>
+
+                <h3>2. Real-Time Metrics</h3>
+                <p>Get access to essential metrics like:</p>
+                <ul>
+                    <li>Current Speed</li>
+                    <li>Maximum Speed</li>
+                    <li>Average Speed</li>
+                    <li>Distance Traveled</li>
+                    <li>Duration of the Test</li>
+                </ul>
+
+                <h3>3. Interactive Controls</h3>
+                <p>Control features include:</p>
+                <ul>
+                    <li>Start Test Button: Begin the simulation to track motion.</li>
+                    <li>Reset Button: Reset all metrics to prepare for a new test.</li>
+                    <li>Unit Toggle: Seamlessly switch between km/h and mi/h.</li>
+                </ul>
+
+                <h3>4. Visual Data Representation</h3>
+                <p>The speed history graph allows users to monitor speed trends over time. By combining motion data and GPS inputs, the tool offers a complete picture of speed dynamics.</p>
+
+                <h3>5. Multi-Device Compatibility</h3>
+                <p>The tool is optimized for desktops, tablets, and smartphones, ensuring accessibility wherever you are.</p>
+            </section>
+
+            <section>
+                <h2>Applications of the Train Speed Test Tool</h2>
+                <ol>
+                    <li>
+                        <h3>Engineering and Development</h3>
+                        <p>Railway engineers can use this tool during prototype testing to assess a train's speed capabilities. It aids in identifying performance issues and optimizing efficiency.</p>
+                    </li>
+                    <li>
+                        <h3>Passenger Safety</h3>
+                        <p>Monitoring train speed helps ensure that it operates within safe limits, reducing the risk of derailments or other accidents.</p>
+                    </li>
+                    <li>
+                        <h3>Railway Enthusiasts</h3>
+                        <p>For train enthusiasts, the tool offers a hands-on way to explore speed measurement, providing a glimpse into the technology used by rail professionals.</p>
+                    </li>
+                    <li>
+                        <h3>Educational Use</h3>
+                        <p>Teachers and students in the fields of physics or mechanical engineering can use the Train Speed Test tool to understand speed, acceleration, and distance relationships.</p>
+                    </li>
+                    <li>
+                        <h3>Vehicle Speedometer Calibration</h3>
+                        <p>Beyond trains, this tool can simulate vehicle speed tests, making it a versatile resource for automobile testing.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>SEO-Friendly Keywords for Train Speed Test Tool</h2>
+                <p>To maximize the visibility of this tool:</p>
+
+                <h3>Primary Keyword:</h3>
+                <p>Train Speed Test</p>
+
+                <h3>Secondary Keywords:</h3>
+                <ul>
+                    <li>Myspeed Train</li>
+                    <li>Vehicle Speedometer Test</li>
+                    <li>Speed Test for Vehicle</li>
+                    <li>Train Speed Check</li>
+                    <li>Live Speed Test</li>
+                    <li>Train Speed Measurement</li>
+                    <li>Distance and Speed Calculator</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>How to Use the Train Speed Test Tool</h2>
+                <h3>Step-by-Step Guide:</h3>
+                <ol>
+                    <li>Access the Tool: Open the Train Speed Test tool on your device.</li>
+                    <li>Start the Test: Click the Start Test button to begin measuring speed.</li>
+                    <li>View Real-Time Metrics: Observe live updates on current speed, maximum speed, and average speed.</li>
+                    <li>Toggle Units: Use the Unit Buttons to switch between km/h and mi/h based on your preference.</li>
+                    <li>Reset for a New Test: After completing a session, click the Reset Button to clear the data and begin a new test.</li>
+                    <li>Analyze Trends: Review the speed history graph to analyze changes over time.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Benefits of Train Speed Testing</h2>
+                <ol>
+                    <li>
+                        <h3>Efficiency Optimization</h3>
+                        <p>Identify areas where energy consumption can be reduced by optimizing speed patterns.</p>
+                    </li>
+                    <li>
+                        <h3>Enhanced Passenger Comfort</h3>
+                        <p>Smooth acceleration and deceleration improve the travel experience for passengers.</p>
+                    </li>
+                    <li>
+                        <h3>Safety Improvements</h3>
+                        <p>Speed monitoring ensures trains stay within operational limits, reducing risks.</p>
+                    </li>
+                    <li>
+                        <h3>Data-Driven Insights</h3>
+                        <p>Accurate metrics help railway companies and vehicle manufacturers make informed decisions.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Behind the Scenes: Technology in Action</h2>
+                <p>The Train Speed Test tool leverages cutting-edge technologies, including:</p>
+                <ul>
+                    <li>Device Motion Sensors: Detects acceleration and motion changes.</li>
+                    <li>GPS Integration: Tracks location-based speed data.</li>
+                    <li>Dynamic Canvas Graphics: Displays a realistic speedometer and history graph.</li>
+                </ul>
+                <p>These technologies work together to create a seamless and realistic speed testing experience.</p>
+            </section>
+
+            <section>
+                <h2>Live Demonstrations and Real-World Use Cases</h2>
+                <p>Imagine you're aboard a high-speed train. Using this tool, you can simulate real-world speed conditions. Adjust the settings to reflect train or vehicle speed variations, and see how changes in acceleration impact overall performance.</p>
+            </section>
+
+            <section>
+                <h2>Conclusion: Your Gateway to Speed Insights</h2>
+                <p>The Train Speed Test tool combines advanced functionality, interactive design, and practical applications, making it an essential resource for professionals, students, and enthusiasts. With its focus on accuracy and real-time data visualization, this tool is a testament to the power of technology in revolutionizing railway and vehicle operations.</p>
+                <p>Start your journey today and explore the fascinating world of speed measurement with the Train Speed Test tool!</p>
+            </section>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
